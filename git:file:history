@@ -1,0 +1,10 @@
+git:file:history() {
+    local file="$1"
+
+    if [ -z "$file" ]; then
+        echo "usage: git:file:history FILE"
+        return 1
+    fi
+
+    git log --follow --oneline -- "$file"
+}
