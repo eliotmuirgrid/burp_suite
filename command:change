@@ -6,6 +6,10 @@ command:change() {
         return 1
     fi
 
-    cd ~/command && git add . && git commit -m "$comment" && git push
-    echo "CHANGE: $comment"
+
+    git add -A || return 1
+    git commit -m "$comment" >/dev/null || return 1
+    git push >/dev/null || return 1
+
+    echo "$comment"
 }
