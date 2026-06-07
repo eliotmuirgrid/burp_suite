@@ -6,7 +6,6 @@ command:change() {
         return 1
     fi
 
-
     git add -A || return 1
     git commit -m "$comment" >/dev/null || return 1
     git push >/dev/null || return 1
