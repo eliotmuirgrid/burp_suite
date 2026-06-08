@@ -1,0 +1,3 @@
+web:console() {
+   open https://console.hetzner.com/projects/14883020/servers
+}
