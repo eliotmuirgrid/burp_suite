@@ -1,0 +1,3 @@
+web:admin() {
+   ssh root@$WEB_IP
+}
