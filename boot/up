@@ -1,0 +1,7 @@
+# Super important to know where you are in the file system
+PROMPT='%n@%m:%~ %# '
+# Load custom shell commands
+for f in ../*; do
+  echo "Install $f"
+  source "$f"
+done
