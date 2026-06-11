@@ -1,0 +1,11 @@
+git:publish() {
+   local msg="${*:-Update}"
+
+   git add . || return
+   git commit -m "$msg" || return
+
+   local branch
+   branch=$(git branch --show-current)
+
+   git push -u origin "$branch"
+}

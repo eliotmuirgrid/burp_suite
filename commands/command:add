@@ -28,5 +28,6 @@ EOF
     fi
 
     vi "$file"
+    source "$file"
     command:change "Added $name" 
 }
