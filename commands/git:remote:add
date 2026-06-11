@@ -1,0 +1,11 @@
+git:remote:add() {
+    local name="$1"
+    local url="$2"
+
+    if [[ -z "$name" || -z "$url" ]]; then
+        echo "Usage: git:remote:add <name> <url>"
+        return 1
+    fi
+
+    git remote add "$name" "$url"
+}
