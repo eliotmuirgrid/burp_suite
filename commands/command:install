@@ -1,7 +1,0 @@
-# Load custom shell commands
-command:add() {
-  for f in "$HOME"/command/**/*(.N); do
-    echo "Install $f"
-    source "$f"
-  done
-}
