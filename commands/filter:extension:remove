@@ -1,0 +1,4 @@
+filter:extension:remove() {
+   local file="$1"
+   echo "${file%.*}"
+}
