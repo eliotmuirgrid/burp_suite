@@ -1,0 +1,3 @@
+press:open() {
+   open "https://github.com/eliotmuirgrid/press"
+}
