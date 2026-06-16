@@ -1,5 +1,5 @@
 edit() {
-   local file=$(filter:extension:remove "${1:-1}")
+   local file=$(filter:extension:remove "${1:-i}")
    vi "${file}.md"
 }
 
