@@ -15,7 +15,7 @@ agent:file() {
 
    echo $cprompt
  #   echo "$(agent:$agent $cprompt)"   
-    echo "$(agent:$agent 'Describe balloons'"   
+    echo "$(agent:$agent 'Describe balloons')"   
 #   {
 #      [[ -n "$prompt" ]] && echo "$prompt"
 #      echo
