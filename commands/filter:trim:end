@@ -7,5 +7,5 @@ filter:trim:end() {
         return 1
     }
 
-    echo "${string%%"$search"*}"
+    echo "${string%"$search"*}"
 }
