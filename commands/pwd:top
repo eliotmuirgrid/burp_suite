@@ -1,0 +1,4 @@
+pwd:top() {
+   local p="${PWD#/}"
+   print -r -- "/${p%%/*}"
+}
