@@ -1,6 +1,6 @@
 filter:trim:begin() {
+    local string="$1"
+    local search="$2"
 
-
-   sed -n "/$1/,\$p"
+    echo "${string#*"$search"}"
 }
-
