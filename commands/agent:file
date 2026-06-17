@@ -11,8 +11,7 @@ agent:file() {
    fi
 
    echo "$agent $file $prompt"
-
-   let cprompt = "$(file:read $file)"
+   cprompt = "$(file:read $file)"
    
 #   {
 #      [[ -n "$prompt" ]] && echo "$prompt"
