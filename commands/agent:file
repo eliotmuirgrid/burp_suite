@@ -11,7 +11,7 @@ agent:file() {
    fi
 
    echo "$agent $file $prompt"
-   cprompt="$prompt:$(file:read $file)"
+   cprompt="$(json:escape $prompt:$(file:read $file))"
 
    echo $cprompt
    echo "$(agent:$agent $cprompt)"   
