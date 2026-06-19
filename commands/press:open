@@ -1,5 +1,5 @@
 press:open() {
    local File=$1;
-   local MdPath=md:path($File); 
+   local MdPath="($md:path($File))"; 
    open "https://github.com/eliotmuirgrid/$MdPath"
 }
