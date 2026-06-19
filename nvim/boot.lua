@@ -1,3 +1,13 @@
+function FileRead(Name)
+   local file = io.open(name, "r")
+   if not file then
+      return nil
+   end
+   local content = file:read("*a")
+   file:close()
+   return content
+end
+
 function Insert(text)
     local lines = vim.split(text, "\n", { plain = true })
 
