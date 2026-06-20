@@ -1,7 +1,7 @@
 string:split() {
-    nameref out="$1"
-    typeset string="$2"
-    typeset sep="${3:-,}"
+    typeset -n out="$1"
+    local string="$2"
+    local sep="${3:-,}"
 
     out=()
 
