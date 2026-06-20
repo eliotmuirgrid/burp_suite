@@ -6,8 +6,5 @@ git:publish() {
    git add . || return
    git commit -m "$msg" || return
 
-   local branch
-   branch=$(git branch --show-current)
-
-   git push -u origin "$branch"
+   git:push:all
 }
