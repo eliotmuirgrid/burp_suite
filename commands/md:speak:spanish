@@ -1,0 +1,12 @@
+md:speak:spanish() {
+   local file="${1:-i.md}"
+
+   [[ "$file" != *.md ]] && file="${file}.md"
+
+   if [[ ! -f "$file" ]]; then
+      echo "md:speak:spanish file not found: $file" >&2
+      return 1
+   fi
+
+   pandoc "$file" -t plain 
+}
