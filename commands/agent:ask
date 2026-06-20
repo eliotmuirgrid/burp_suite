@@ -1,0 +1,7 @@
+agent:ask() {
+   if [[ -z "$1" ]] then
+      echo "Usage: agent:ask Prompt"
+      return 1
+   fi
+   agent:chatgpt $1 | glow
+}
