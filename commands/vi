@@ -1,0 +1,5 @@
+vi() {
+   # Later figure out multiple arguments
+   edit $1 $2 $3 $4
+}
+
