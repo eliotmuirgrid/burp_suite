@@ -88,6 +88,7 @@ AgentGpt = function(Prompt)
    local Response = HttpPost(P);
    Response = FilterTrimBegin(Response,'"text": \"');
    Response = FilterTrimEnd(Response,'"role": "assistant"')
+   print(Response);
    Response = FilterTrimEnd(Response, '"');
 
    Response = JsonUnescape(Response);
