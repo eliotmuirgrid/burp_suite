@@ -1,0 +1,7 @@
+git:remote:remove() {
+   if [[ -z "$1" ]]; then
+      echo "Usage: git:remote:remove <name>"
+      return 1
+   fi
+   git remove remote $1
+}
