@@ -1,4 +1,4 @@
-# For IT Graduates wanting Employment in Healthcare IT As White Hat Security Expert
+# For IT Graduates wanting Employment in Healthcare IT As A White Hat Security Expert
 
 If you are a graduate trying to find employment opportunities in Healthcare IT technology this could give you an edge in the marketplace.  It will enable you to demonstrate to your prospective employer how wide open their systems are to attack.  You can follow me and discover how to secure their systems.  Ransomware attacks are a huge problem in the healthcare IT right now and this tool chain makes everything available to you with an easy learning curve.
 
