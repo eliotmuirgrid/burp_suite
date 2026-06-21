@@ -1,0 +1,9 @@
+url:open() {
+   if [[ -z "$1" ]]; then
+      echo "Usage: url:open <arg1>"
+      return 1
+   fi
+
+   # TODO - make this work on OS other than Mac.
+   open "$1"
+}

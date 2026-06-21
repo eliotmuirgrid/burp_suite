@@ -5,5 +5,5 @@ press:open() {
     md_path="$(md:path "$file")"
     md_path="$(filter:trim:begin "$md_path" "/press")"
 
-    open "https://github.com/eliotmuirgrid/press/blob/main${md_path}"
+    url:open "https://github.com/eliotmuirgrid/press/blob/master${md_path}"
 }
