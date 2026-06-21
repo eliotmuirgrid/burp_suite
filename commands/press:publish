@@ -1,0 +1,8 @@
+press:publish() {
+   if [[ -z "$1" ]]; then
+      echo "Usage: press:publish <file>"
+      return 1
+   fi
+   git:publish
+   press:open "$1"
+}

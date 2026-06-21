@@ -25,11 +25,23 @@ function FilterTrimBegin(String, Search)
 end
 
 function FilterTrimEnd(String, Search)
-   local Start,End = String:find(Search,1,true)
-   if not Start then
+   local LastStart
+
+   local Pos = 1
+   while true do
+      local Start = String:find(Search, Pos, true)
+      if not Start then
+         break
+      end
+      LastStart = Start
+      Pos = Start + 1
+   end
+
+   if not LastStart then
       return String
    end
-   return String:sub(1, Start-1)
+
+   return String:sub(1, LastStart - 1)
 end
 
 function JsonEncode(T)
@@ -71,6 +83,14 @@ function Insert(text)
 end
 
 function JsonUnescape(s)
+   s=s:gsub('\\n', '\n');
+   s=s:gsub('\\u2014', '—');
+   s=s:gsub('\\u201c', '“');
+   s=s:gsub('\\u201d', '”');
+   s=s:gsub('\\u2026', '…');
+   s=s:gsub('\\u2019', '’');
+   s=s:gsub('\\"', '"');
+   s=s:gsub("\\'", "'");
    return s 
 end
 
@@ -88,7 +108,7 @@ AgentGpt = function(Prompt)
    local Response = HttpPost(P);
    Response = FilterTrimBegin(Response,'"text": \"');
    Response = FilterTrimEnd(Response,'"role": "assistant"')
-   print(Response);
+   --print(Response);
    Response = FilterTrimEnd(Response, '"');
 
    Response = JsonUnescape(Response);
