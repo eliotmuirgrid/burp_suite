@@ -17,11 +17,9 @@ They use z-shell which is one of the nicest shells available.
 It's the default shell on Mac OS X these days and you can I believe it can even run on Windows.  I haven't done it yet but I think on a Mac or Linux machine it won't be that hard.  Nothing is
 that complicated.
 
-To understand the potential for these tools can be used please see the press release about [Burp Suite](https://github.com/eliotmuirgrid/press/blob/main/safety/escrow/burp.md).
+## FlowShell is also Fun for Ordinary Folks
 
-## Burp Suite is also Fun for Ordinary Folks
-
-But Burp Suite isn't just for security conscious administrators.  It's also for ordinary folks that just want to save time automating all those annoying tasks.
+But FlowShell isn't just for security conscious administrators.  It's also for ordinary folks that just want to save time automating all those annoying tasks.
 
 For instance I love listening to music on Spotify when I work so [music:play](commands/music:play) makes it simple for me to quickly listen to what I want to.
 
@@ -38,11 +36,11 @@ At least for now while the tools are in beta.  Fork them if you want to guarante
 amazed at what you can do once you embrace hacking open source tools and realize that when we just make the effort as hackers to communicate a little more
 clearly everyone benefits. Burp suite is all about making open source computing and fun anyone who is curious and willing to experiment and learn.
 
-## Burp Suite is Actually Part of the More Serious Purpose 
+## FlowShell is Actually Part of the More Serious Purpose 
 
 This is the tooling framework I am using the build the next version of Iguana and a lot more.
 
-Read more about [the purpose of Burp Suite](https://github.com/eliotmuirgrid/press/blob/master/iguana/burp/i.md).
+Read more about [the purpose of FlowShell](https://github.com/eliotmuirgrid/press/blob/master/command/flow.md).
 
 ## License Terms
 
