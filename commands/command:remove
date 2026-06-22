@@ -5,5 +5,5 @@ command:remove() {
       return 1
    fi
    git rm ~/command/$name
-   git:publish "Removed command $name"
+   command:publish "Removed command $name"
 }

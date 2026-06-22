@@ -26,5 +26,5 @@ EOF
 
    edit "$file"
    source $file
-   git:publish "Added $name" 
+   command:publish "Added $name" 
 }
