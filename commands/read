@@ -1,5 +1,5 @@
 read() {
-   local file=$(filter:extension:remove "${i:-1}")
+   local file=$(filter:extension:remove "${1:-i}")
    glow "${file}.md"
 }
 
