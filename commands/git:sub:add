@@ -1,0 +1,14 @@
+git:sub:add() {
+    local repo="$1"
+
+    if [[ -z "$repo" ]]; then
+        echo "usage: git:sub:add <repo-url>"
+        return 1
+    fi
+
+    local dir
+    dir=$(basename "$repo")
+    dir="${dir%.git}"
+
+    git submodule add "$repo" "$dir"
+}
