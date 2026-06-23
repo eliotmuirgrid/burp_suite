@@ -1,27 +1,11 @@
 command:add() {
    local name="$1"
-
-   if [[ -z "$name" ]]; then
-      echo "Usage: command:add <command-name>"
-      return 1
-   fi
-
+   arg:check 1 "@" || return 1
    local file="$CMD_DIR/$name"
-
    if [[ ! -e "$file" ]]; then
-      cat > "$file" <<EOF
-$name() {
-   if [[ -z "\$1" ]] || [[ -z "\$2" ]]; then
-      echo "Usage: $name <arg1> <arg2>"
-      return 1
-   fi
-
-   echo "arg1: \$1"
-   echo "arg2: \$2"
-}
-EOF
-     chmod +x "$file"
-     echo "Created $file"
+      command:boiler:plate "$file" "$name"
+      chmod +x "$file"
+      echo "Created $file"
    fi
 
    edit "$file"
