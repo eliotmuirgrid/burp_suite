@@ -1,13 +1,28 @@
-file:list:smart() {
-   local file
+#TODO - ARGH COMPLICATED - DEAL LATER
+file:list:smart2() {
+   local file ext
 
-   for file; do
-      if   [[ -e "$file"      ]]; then echo "$file"
-      elif [[ -e "$file.lua"  ]]; then echo "$file.lua"
-      elif [[ -e "$file.md"   ]]; then echo "$file.md"
-      elif [[ -e "$file.sh"   ]]; then echo "$file.sh"
-      elif [[ -e "$file.c"    ]]; then echo "$file.c"
-      else                             echo "$file.md"
+   for file in "$@"; do
+      [[ -z "$file" ]] && continue
+
+      # If caller already supplied an extension, do not add another one.
+      if [[ "$file" == *.* ]]; then
+         echo "$file"
+         continue
       fi
+
+      if [[ -e "$file" ]]; then
+         echo "$file"
+         continue
+      fi
+
+      for ext in lua md sh c h cpp json txt yaml yml; do
+         if [[ -e "$file.$ext" ]]; then
+            echo "$file.$ext"
+            continue 2
+         fi
+      done
+
+      echo "$file.md"
    done
 }
