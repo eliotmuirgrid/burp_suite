@@ -4,5 +4,6 @@ press:publish() {
       return 1
    fi
    git:publish
+   press:sync
    press:open "$1"
 }

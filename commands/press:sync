@@ -1,0 +1,7 @@
+press:sync() {
+   rsync -av --delete \
+      --exclude='.git/' \
+      --exclude='.DS_Store' \
+      ~/press/ \
+      eliot@caymanisland1:~/press/
+}

@@ -72,7 +72,7 @@ function HttpPost(T)
    return Result;
 end
 
-function Insert(text)
+function BeginInsert(text)
     local lines = vim.split(text, "\n", { plain = true })
 
     vim.api.nvim_buf_set_lines(
@@ -120,7 +120,16 @@ function StripExtension(FileName)
   return FileName:gsub("%.[^.]+$", "")
 end
 
-local Path = os.getenv('HOME').."/command/nvim/"
+function BufferCompleteGet()
+   -- Get all lines from the current buffer                                  
+   local buf = vim.api.nvim_get_current_buf()                                
+   local lines = vim.api.nvim_buf_get_lines(buf, 0, -1, false)               
+   local content = table.concat(lines, "\n")  
+   return content;
+end
+
+-- TODO should be more soft coded.
+local Path = os.getenv('HOME').."/flowshell/nvim/"
 
 for Name in vim.fs.dir(Path) do
    if Name ~= 'boot.lua' and Name:sub(1,1) ~= "." then

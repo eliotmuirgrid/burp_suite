@@ -1,7 +1,7 @@
 command:add() {
    local name="$1"
    arg:check 1 "@" || return 1
-   local file="$CMD_DIR/$name"
+   local file="$FLOW_COMMANDS/$name"
    if [[ ! -e "$file" ]]; then
       command:boiler:plate "$file" "$name"
       chmod +x "$file"

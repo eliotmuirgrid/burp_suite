@@ -1,6 +1,6 @@
 command:edit() {
    arg:check 1 "@" || return 1
-   edit $CMD_DIR/$1
-   source $CMD_DIR/$1 
+   edit $FLOW_COMMANDS/$1
+   source $FLOW_COMMANDS/$1 
    command:publish "Edited $1"
 }
