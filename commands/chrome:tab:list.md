@@ -1,0 +1,18 @@
+tabs:list() {
+   osascript <<'APPLESCRIPT'
+tell application "Google Chrome"
+   set output to ""
+
+   repeat with w in windows
+      set i to 1
+
+      repeat with t in tabs of w
+         set output to output & "Window " & (index of w) & ", Tab " & i & ": " & (title of t) & linefeed
+         set i to i + 1
+      end repeat
+   end repeat
+
+   return output
+end tell
+APPLESCRIPT
+}
