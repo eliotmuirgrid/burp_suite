@@ -1,6 +1,6 @@
 hubspot:publish() {
    arg:check 1 "$@" || return;
-
+   local file="${1%.md}"
    cat<<EOF
 <!--
   templateType: page
@@ -14,5 +14,5 @@ hubspot:publish() {
 {% block body %}
 <div style="padding: 1em 1em 1em 3em; max-width: 50em;">
 EOF
-
+    pandoc -s "${file}.md"
 }
