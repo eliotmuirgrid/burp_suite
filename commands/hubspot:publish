@@ -14,5 +14,16 @@ hubspot:publish() {
 {% block body %}
 <div style="padding: 1em 1em 1em 3em; max-width: 50em;">
 EOF
-   pandoc "${file}.md"
+   pandoc "${file}.md" --lua-filter=~/flowshell/lua/rebase.lua 
+   cat<<FEB
+</div>
+
+{% endblock body %}
+
+
+<!-- Homepage FAQ Section -->
+{% block faq %}
+	{% module "faq-homepage" path='/iguanax-website-theme/modules/faq', label="On-Page Footer FAQ" %}
+{% endblock faq %}
+FEB
 }
