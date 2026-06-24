@@ -6,5 +6,6 @@ git:publish() {
    git -C $root add . || return
    git -C $root commit -m "$msg" || return
 
+   git pull --no-edit:wq
    git:push:all
 }
