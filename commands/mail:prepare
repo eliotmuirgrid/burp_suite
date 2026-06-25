@@ -10,9 +10,7 @@ mail:prepare() {
 tell application "Mail"
     activate
 
-    set newMessage to make new outgoing message with properties { 
-       visible:true 
-    } 
+    set newMessage to make new outgoing message with properties {visible:true, subject: "sdfsd" } 
 end tell
 EOF
 #        subject:"$subject", 
