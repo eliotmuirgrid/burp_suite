@@ -1,8 +1,8 @@
 git:copy:fresh() {
    arg:check 2 "$@" || return;
 
-   local source="~$1"
-   local target="~$2"
+   local source="$1"
+   local target="$2"
 
    mkdir -p "$target"
 
