@@ -1,5 +1,5 @@
 mail:prepare() {
-
+   local dir=dir:current
    echo "Sending email to $1 Subject: $2 \n$3\nattachment:$attachment" 
 
    osascript <<EOF
@@ -8,7 +8,7 @@ tell application "Mail"
     set newMessage to make new outgoing message with properties {visible:true,subject:"$2",content:"$3"} 
     tell newMessage
         make new to recipient at end of to recipients with properties {address:"$1"}
-        make new attachment with properties {file name:POSIX file "$4"} at after the last paragraph
+        make new attachment with properties {file name:POSIX file "$dir/$4"} at after the last paragraph
     end tell
 end tell
 EOF
