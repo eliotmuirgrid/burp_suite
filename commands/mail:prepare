@@ -1,0 +1,3 @@
+mail:prepare() {
+   arg:check 3 $@" || return;
+}
