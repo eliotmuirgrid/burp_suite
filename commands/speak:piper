@@ -1,7 +1,7 @@
 speak:piper() {
    local wav=$(mktemp /tmp/piper.XXXXXX.wav)
 
-   echo "$*" | \ /Users/eliotmuir/piper-test/venv/bin/piper \
+   echo "$*" |  /Users/eliotmuir/piper-test/venv/bin/piper \
      --model ~/piper-voices/en_US-lessac-medium.onnx \
      --output_file "$wav" >/dev/null
 
