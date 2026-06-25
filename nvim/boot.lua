@@ -90,6 +90,7 @@ function JsonUnescape(s)
    s=s:gsub('\\u201d', '”');
    s=s:gsub('\\u2026', '…');
    s=s:gsub('\\u2019', '’');
+   s=s:gsub('\\u00f6', 'o'); -- TODO 0  
    s=s:gsub('\\"', '"');
    s=s:gsub("\\'", "'");
    return s 

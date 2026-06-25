@@ -1,0 +1,10 @@
+|-----------------------------|---------------------------------------------------|
+| Push changes                | `git push --force`                                |
+
+---
+
+git:delete:permanent() {
+   arg:check 1 "$@" || return;
+   git filter-repo --path $1 --invert-paths  
+   git push --force                                
+}
