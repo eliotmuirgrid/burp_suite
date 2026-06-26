@@ -1,0 +1,8 @@
+md:strip() {
+   arg:check 1 "$@" || return;
+   local file="${1:-i.md}"
+
+   [[ "$file" != *.md ]] && file="${file}.md"
+
+   pandoc "$file" -t plain 
+}
