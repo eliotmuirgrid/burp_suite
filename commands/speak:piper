@@ -4,8 +4,15 @@ speak:piper(){
    local output=$(arg:get output output "$@")
    local play=$(arg:get play true "$@")
    local text=$(arg:get text Hello "$@")
+   local mdtext=$(arg:get file none "$@")
 
    local file="$HOME/piper-voices/$voice.onnx"
+
+   if [[ "$mdtext" != "none" ]]; then
+      echo "Reading file. $mdtext"
+      text=$(md:strip "$mdtext")
+      echo $text
+   fi
 
    echo "$text" |  /Users/eliotmuir/piper-test/venv/bin/piper \
      --model "$file" \
