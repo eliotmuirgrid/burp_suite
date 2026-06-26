@@ -1,7 +1,11 @@
 speak:piper() 
    local voice="${2:-libritts-high}
+
+   local file="~/piper-voices/en_US-$voice.onnx"
+   echo $file
+
    echo "$1" |  /Users/eliotmuir/piper-test/venv/bin/piper \
-     --model "~/piper-voices/en_US-$voice.onnx" \
+     --model ~/piper-voices/en_US-libritts-high.onnx \
      --length_scale 1.5 \
      --output_file "$2" >/dev/null
 
