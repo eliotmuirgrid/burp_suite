@@ -1,0 +1,4 @@
+git:commit() {
+   local message="${arg:default $1 Update}"
+   git commit -m "$message"
+}
