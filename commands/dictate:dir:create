@@ -1,0 +1,12 @@
+dictate:dir:create() {
+   if file:exist "$HOME/flowdata"; then
+      echo "Creating $HOME/flowdata"
+      dir:create "$HOME/flowdata"
+   fi
+   if file:exist "HOME/flowdata/whisper"; then
+      echo "Creating $HOME/flowdata/whisper"
+      dir:create "$HOME/flowdata/whisper"
+   else 
+      echo "$HOME/flowdata/whisper exists"
+   fi
+}

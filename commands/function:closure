@@ -1,0 +1,8 @@
+function:closure() {
+  local fname="anonfunc_$RANDOM$RANDOM"
+  eval "
+  $fname() {
+    $@
+  }"
+  print "$fname"
+}

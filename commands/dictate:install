@@ -1,0 +1,3 @@
+dictate:install() {
+   brew install whisper-cpp
+}

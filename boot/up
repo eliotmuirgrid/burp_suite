@@ -4,10 +4,5 @@ FLOW_SHELL=$HOME/flowshell
 FLOW_COMMANDS=$FLOW_SHELL/commands
 export LUA_PATH="$FLOW_SHELL/nvim/?.lua"
 
-# Load custom shell commands
-for f in $FLOW_COMMANDS/*; do
-  if [[ -f $f && $(basename "$f") != *.* ]]; then
-     #echo "Install $f"
-     source "$f"
-  fi
-done
+source "$FLOW_COMMANDS/command:install"
+command:install
